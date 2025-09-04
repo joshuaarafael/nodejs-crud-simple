@@ -5,9 +5,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASS || '',
+  host: process.env.DB_HOST || 'nodejava.cvwoy4iazwth.us-east-1.rds.amazonaws.com',
+  user: process.env.DB_USER || 'admin',
+  password: process.env.DB_PASS || 'joshuaRAFAEL82472',
   database: process.env.DB_NAME || 'testdb',
 });
 
