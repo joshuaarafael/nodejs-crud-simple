@@ -10,6 +10,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json()); // Untuk parsing body JSON
+app.use(express.urlencoded({ extended: true }));
 
 // Tambahkan ini untuk melayani file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));

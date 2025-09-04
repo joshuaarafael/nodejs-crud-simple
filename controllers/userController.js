@@ -25,15 +25,18 @@ exports.getUserById = async (req, res) => {
 exports.createUser = async (req, res) => {
   try {
     const { name, email, age } = req.body;
-    if (!name || !email || !age) {
+
+    if (!name || !email || age == null) {   // ✅ age harus dicek null, bukan falsy
       return res.status(400).json({ message: 'Name, email, and age are required' });
     }
+
     const newUser = await User.create(name, email, age);
     res.status(201).json(newUser);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
 };
+
 
 exports.updateUser = async (req, res) => {
   try {
