@@ -4,9 +4,7 @@
   "description": "A simple Node.js CRUD app with Express.js and MySQL",
   "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [],
